@@ -1,7 +1,10 @@
+/* FILTROS COM O BOTÃO */
+
+const ulListDisc = document.getElementById("ul_cards")
 function genreFilter(){
     
     const genreButtons = document.querySelectorAll(".button_genre")
-    const ulListDisc = document.getElementById("ul_cards")
+    
 
     genreButtons.forEach(button =>{ 
         button.addEventListener("click", ()=>{
@@ -21,11 +24,11 @@ function genreFilter(){
 }
 
 
-function filterDisc(buttonText, product, arrayCategorias){
+function filterDisc(buttonText, products, arrayCategorias){
 
         let indexCategoria = arrayCategorias.indexOf(buttonText)
         
-        const filteredProduct = product.filter((disc) =>{
+        const filteredProduct = products.filter((disc) =>{
             return disc.category === indexCategoria
         })
          
@@ -33,3 +36,23 @@ function filterDisc(buttonText, product, arrayCategorias){
 }
 
 genreFilter()
+
+/* FILTROS COM O INPUT */
+
+function inputPrice(inputValue){
+    document.querySelector(".priceRange").innerHTML = `Até R$ ${inputValue}`
+    discPrice()
+}
+
+function discPrice(discs = products){
+
+    let input = document.querySelector(".input_range")  
+     
+    let DiscFilteredValue = discs.filter((disc) => disc.price <= input.value)
+    console.log(DiscFilteredValue)
+    ulListDisc.innerHTML = ""
+    
+    renderDiscs(DiscFilteredValue)
+}
+
+discPrice(products)

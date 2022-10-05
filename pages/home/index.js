@@ -32,7 +32,6 @@ function createCard(disc){
     let tagButtonBuy = document.createElement("button")
 
     tagLi.classList.add("li_cards")
-    //tagLi.setAttribute(("id", id))
     tagDivImg.classList.add("div_img")
     tagDivCardDescription.classList.add("div_cardDescription")
     tagDivBandYear.classList.add("div_band_year")
