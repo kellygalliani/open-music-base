@@ -1,0 +1,22 @@
+.title1{
+    color: var(--color-grey-1);
+    font-size: var(--font-1);
+    font-weight: 600;
+}
+.title2{
+    color: var(--color-grey-1);
+    font-size: var(--font-2);
+    font-weight: 600;
+}
+
+.text1{
+    color: var(--color-grey-1);
+    font-size: var(--font-3);
+    font-weight: 600;
+}
+
+.text2{
+    color: var(--color-grey-2);
+    font-size: var(--font-4);
+    font-weight: 500;
+}

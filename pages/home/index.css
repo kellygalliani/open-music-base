@@ -1,1 +1,38 @@
-/* Desenvolva sua estilização aqui ... */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5.563rem;
+}
+
+/* .img_dark_mode{
+    background-color: var(--color-grey-8);
+    padding: 0.563rem 0.625rem;
+    border-radius: var(--radius-1);
+    cursor: pointer;
+} */
+
+.main{
+    margin-top: 4.313rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+.div_buttons_genres{
+    display: flex;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+}
+
+.div_title_price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
