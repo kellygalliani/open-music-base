@@ -19,7 +19,7 @@ function renderDiscs(array){
     
     if(darkPreference) {
         html.classList.add('dark-mode')
-        themeIcon.src = "../../assets/img/sun.svg"
+        themeIcon.src = "./assets/img/sun.svg"
     }
 
     array.forEach((disc) => {
