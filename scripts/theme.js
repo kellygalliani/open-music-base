@@ -9,16 +9,12 @@ function changeTheme(){
 
         const darkPreference = localStorage.getItem("darkmode")
         if(!darkPreference){
-            localStorage.setItem("darkmode", true)    
+            localStorage.setItem("darkmode", true)
+            themeIcon.src = "../../assets/img/sun.svg"    
         }
 
         if(darkPreference){
             localStorage.removeItem("darkmode")
-        }
-
-        if(themeIcon.classList.contains("text-white")){
-            themeIcon.src = "../../assets/img/sun.svg"
-        } else {
             themeIcon.src = "../../assets/img/moon.svg"
         }
 

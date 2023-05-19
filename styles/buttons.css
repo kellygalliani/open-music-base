@@ -8,7 +8,7 @@
    cursor:pointer;
 }
 
-.button_genre:focus, .button_genre:active {
+.button_genre:focus , .button_genre:active {
     background-color: var(--color-grey-1);
     color: var(--color-grey-8);
     border: 1 solid var(--color-grey-1);

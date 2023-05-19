@@ -2,12 +2,11 @@
 
 const ulListDisc = document.getElementById("ul_cards")
 function genreFilter(){
-    
     const genreButtons = document.querySelectorAll(".button_genre")
-    
 
     genreButtons.forEach(button =>{ 
-        button.addEventListener("click", ()=>{
+        button.addEventListener("click", (event)=>{
+            event.preventDefault()
         ulListDisc.innerHTML = ""
         const buttonTextfilter = button.innerText
 
@@ -49,7 +48,6 @@ function discPrice(discs = products){
     let input = document.querySelector(".input_range")  
      
     let DiscFilteredValue = discs.filter((disc) => disc.price <= input.value)
-    console.log(DiscFilteredValue)
     ulListDisc.innerHTML = ""
     
     renderDiscs(DiscFilteredValue)

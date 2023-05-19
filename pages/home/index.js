@@ -1,11 +1,25 @@
+window.addEventListener("load", () => {
+    const button_genre = document.querySelectorAll(".button_genre");
+    console.log(button_genre)
+    button_genre.forEach(button => {
+        if (button.innerText === "Todos") {
+            button.click();
+            button.focus();
+            button.active();
+        } 
+    })
+  });
+    
 function renderDiscs(array){
     const html = document.querySelector("html")
     const ulListDisc = document.querySelector(".ul_cards")
-
+    const themeIcon = document.querySelector("#themeIcon")
     const darkPreference = localStorage.getItem("darkmode")
-
+   
+    
     if(darkPreference) {
         html.classList.add('dark-mode')
+        themeIcon.src = "../../assets/img/sun.svg"
     }
 
     array.forEach((disc) => {
